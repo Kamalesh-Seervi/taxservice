@@ -3,7 +3,9 @@ body{
     padding: 0;
 }
 .top{
-
+display: flex;
+flex-direction:column;
+/* position:relative; */
 }
 .topcontact{
     display: flex;
@@ -15,10 +17,11 @@ body{
     flex-direction: row;
     justify-content: space-between;
     height: 30px;
+    /* position: fixed; */
 }
-.appointment{
+/* .appointment{
     display: flex;
-}
+} */
 .phem{
     margin: 3px;
     transition: all .5s ease;
@@ -32,51 +35,47 @@ body{
     background-color : transparent;
     padding: 4px;
     outline: none;
-    border-radius:8px;
+    border-radius:3px;
 }
+
 .phem:hover {
     color: #001F3F;
     background-color: #fff;
 }
 
 
-.tax{
+/* .tax{
     width: 100%;
     height:600px;
-}
+} */
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
+  /* width: 100%;
+  max-width: 1440px; */
+  /* margin: 0 auto;
+  padding: 0 15px; */
 }
-.header-area {
+/* .header-area {
   background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
   url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
   background-position: center center;
   background-size: cover;
-}
+} */
 /* default css end */
 
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0,0,0,.6);
-  border-bottom: 1px solid #000;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  /* position:fixed; */
 }
 .site-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-a.site-logo {
-  font-size: 26px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none;
-}
+
 .site-navbar ul {
   margin: 0;
   padding: 0;
@@ -84,21 +83,21 @@ a.site-logo {
   display: flex;
 }
 .site-navbar ul li a {
-  color: #fff;
+  color: rgb(0, 0, 0);
   padding: 20px;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
 }
 .site-navbar ul li a:hover {
-  background: rgba(255,255,255,.1);
+  background: rgba(124, 113, 113, 0.1);
 }
 /* navbar regular css end */
 
 
 /* nav-toggler css start */
 .nav-toggler {
-  border: 3px solid #fff;
+  border: 3px solid rgb(0, 0, 0);
   padding: 5px;
   background-color: transparent;
   cursor: pointer;
@@ -110,7 +109,7 @@ a.site-logo {
 .nav-toggler span:after {
   width: 28px;
   height: 3px;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
   display: block;
   transition: .3s;
 }
@@ -140,7 +139,7 @@ a.site-logo {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .intro-area h2 {
   font-size: 50px;
@@ -167,15 +166,15 @@ a.site-logo {
     min-height: 60px;
   }
   .site-navbar ul {
-    position: absolute;
+    position:fixed;
     width: 100%;
     height: calc(100vh - 60px);
-    left: 0;
-    top: 60px;
+    /* left: 5px; */
+    /* top: 60px; */
     flex-direction: column;
     align-items: center;
     /* border-top: 1px solid #444; */
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(255, 255, 255, 0.75);
     max-height: 0;
     overflow: hidden;
     transition: .3s;
@@ -194,27 +193,23 @@ a.site-logo {
     max-height: 100vh;
     overflow: visible;
   }
-  .intro-area h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-  }  
   /* navbar css for mobile end */
 }
 /* mobile breakpoint end */
 
 .top2{
-  margin-top: 124px;
+    margin-top: 124px;
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:flex-start;
 }
-.top2::before {
+.top2::before{
   content: "";
-  width: 200vw;
+  width: 100vw;
   height:80vh;
-  position: absolute;
-  /* top:100px; */
+  position:absolute;
+  top:100px; 
   background-image: url(/taxservice/images/tax.jpg);
   background-size:100vw;
   background-repeat: no-repeat;
@@ -226,7 +221,8 @@ a.site-logo {
     margin: 5px 5px 5px 50px;
     font-weight:900;
     font-family: Montserrat, sans-serif;
-    z-index:+2;
+    z-index:+1;
+    position:relative;
 }
 span{
     color: rgb(25, 182, 25);
@@ -285,5 +281,10 @@ span{
 
 
 .middle{
+  margin:0;
+  height: 500px;
+}
+.bottom{
   margin: 0;
+  height: 500px;
 }
