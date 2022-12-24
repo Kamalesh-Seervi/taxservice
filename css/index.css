@@ -67,7 +67,7 @@ flex-direction:column;
 /* navbar regular css start */
 .navbar-area {
   background: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  /* border-bottom: 1px solid rgb(255, 255, 255); */
   margin: 0;
   /* position:fixed; */
 }
@@ -91,7 +91,8 @@ flex-direction:column;
   text-transform: uppercase;
 }
 .site-navbar ul li a:hover {
-  background: rgba(124, 113, 113, 0.1);
+  background:#303df73b;
+  border-radius: 5px;
 }
 /* navbar regular css end */
 
@@ -150,12 +151,12 @@ flex-direction:column;
     position:fixed;
     width: 50%;
     height: calc(100vh - 60px);
-    /* left: 5px; */
-    /* top: 60px; */
+    left: 5px;
+    top: 60px;
     flex-direction: column;
-    align-items:flex-end;
+    align-items:flex-start;
     /* border-top: 1px solid #444; */
-    background-color: rgba(171, 148, 148, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     max-height:100px;
     overflow: hidden;
     transition: .3s;
@@ -168,7 +169,7 @@ flex-direction:column;
     padding: 25px;
   }
   .site-navbar ul li a:hover {
-    background-color: rgba(255,255,255,.1);
+    background-color:#303df73b;
   }
   .site-navbar ul.open {
     max-height: 100vh;
@@ -187,12 +188,12 @@ flex-direction:column;
 }
 .top2::before{
   content: "";
-  width: 100vw;
-  height:80vh;
+  width:100%;
+  height:600px;
   position:absolute;
   top:85px; 
   background-image: url(/taxservice/images/tax.jpg);
-  background-size:100vw;
+  background-size:100%;
   background-repeat: no-repeat;
   opacity:70%;
   
@@ -206,7 +207,7 @@ flex-direction:column;
     position:relative;
 }
 span{
-    color: rgb(25, 182, 25);
+    color:#303ef7;
 }
 
 .button-3 {
@@ -219,8 +220,8 @@ span{
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
@@ -240,16 +241,16 @@ span{
 }
 
 .button-3:hover {
-  background-color:rgb(25, 182, 25);
+  background-color:#303ef7;
 }
 
 .button-3:focus {
-  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  box-shadow: #303ef7 0 0 0 3px;
   outline: none;
 }
 
 .button-3:disabled {
-  background-color: #94d3a2;
+  background-color:#303ef7
   border-color: rgba(27, 31, 35, .1);
   color: rgba(255, 255, 255, .8);
   cursor: default;
@@ -260,12 +261,80 @@ span{
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
 
-.middle{
-  margin:0;
-  height: 500px;
+.middle {
+  margin:100px 0 0 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,0.4934567577030813) 0%, rgba(48,62,247,0.5354735644257703) 100%);
 }
+
+.middle h1 {
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+}
+
+.middle h1::after {
+  content: '';
+  background:#303ef7;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #303ef7;
+}
+
+.service h2 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service:hover {
+  background: #303ef7;
+  color: #fff;
+  transform: scale(1.00);
+  /* margin: 0 0 10px 0; */
+}
+
+.service:hover i {
+  color: #fff;
+}
+
 .bottom{
   margin: 0;
   height: 500px;
+  background-color: f;
 }
